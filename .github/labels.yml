@@ -1,0 +1,48 @@
+- name: bug
+  color: d73a4a
+  description: Broken in-game behavior after the pack loads.
+- name: crash
+  color: b60205
+  description: Launch failure, runtime crash, or server boot failure.
+- name: performance
+  color: fbca04
+  description: FPS, TPS, memory, networking, or compatibility performance issue.
+- name: balance
+  color: c5def5
+  description: Config, recipe, loot, progression, or gameplay balance feedback.
+- name: content
+  color: 0e8a16
+  description: Mod, resource pack, shader pack, datapack, or other pack content request.
+- name: docs
+  color: 0075ca
+  description: Repository documentation changes.
+- name: tooling
+  color: 5319e7
+  description: Node, CI, release, lint, or automation changes.
+- name: mod
+  color: 1d76db
+  description: Mod metadata or mod list change.
+- name: config
+  color: fef2c0
+  description: Runtime config file change.
+- name: defaultconfig
+  color: fef2c0
+  description: Default server or world config change.
+- name: resourcepack
+  color: 006b75
+  description: Resource pack change.
+- name: shaderpack
+  color: 5319e7
+  description: Shader pack change.
+- name: datapack
+  color: 0e8a16
+  description: Datapack change.
+- name: kubejs
+  color: c2e0c6
+  description: KubeJS script or asset change.
+- name: deps
+  color: 0366d6
+  description: Dependency or tooling package update.
+- name: release
+  color: ffd33d
+  description: Version, changelog, or release metadata.

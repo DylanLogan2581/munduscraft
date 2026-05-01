@@ -1,0 +1,86 @@
+name: Crash or Launch Failure
+description: Report crashes, startup failures, disconnect loops, or server boot failures.
+title: "[Crash]: "
+labels: ["crash"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Attach the crash report and latest log whenever possible.
+        Crash reports are usually in `crash-reports/`; logs are usually in `logs/latest.log`.
+  - type: input
+    id: pack-version
+    attributes:
+      label: Pack version
+      placeholder: "0.0.0"
+    validations:
+      required: true
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft and loader version
+      placeholder: "Minecraft 1.21.1, loader version from pack.toml"
+    validations:
+      required: true
+  - type: dropdown
+    id: crash-point
+    attributes:
+      label: When does it crash?
+      options:
+        - Before the launcher opens Minecraft
+        - During Minecraft startup
+        - At the main menu
+        - While joining a world
+        - While playing
+        - While joining a server
+        - During dedicated server startup
+        - During dedicated server runtime
+    validations:
+      required: true
+  - type: input
+    id: launcher
+    attributes:
+      label: Launcher or server environment
+      placeholder: "Prism Launcher, Modrinth App, CurseForge, Docker, systemd, manual Java command"
+    validations:
+      required: true
+  - type: input
+    id: java
+    attributes:
+      label: Java version
+      placeholder: "Java 21, Temurin 21.0.x"
+    validations:
+      required: true
+  - type: input
+    id: memory
+    attributes:
+      label: Allocated memory
+      placeholder: "Client: 6 GiB, Server: 8 GiB"
+    validations:
+      required: false
+  - type: textarea
+    id: actions
+    attributes:
+      label: What were you doing?
+      description: Include the last action before the crash, or the install/update step that failed.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Crash report and latest log
+      description: Attach files instead of pasting full logs. Include both client and server logs for multiplayer issues.
+      placeholder: "Drag crash report and latest.log here or link to a paste."
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I reproduced this without adding or removing mods from the pack.
+          required: true
+        - label: I included the crash report or latest log.
+          required: true
+        - label: I searched existing issues for a duplicate.
+          required: true

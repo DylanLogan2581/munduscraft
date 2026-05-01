@@ -1,0 +1,36 @@
+{
+  "name": "munduscraft",
+  "version": "0.0.0",
+  "private": true,
+  "description": "munduscraft is a packwiz-managed Minecraft modpack. It targets Minecraft 1.21.1",
+  "license": "GPL-3.0-or-later",
+  "author": "DylanLogan2581",
+  "packageManager": "npm@11.9.0",
+  "scripts": {
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "commit": "cz",
+    "lint": "node scripts/lint.mjs",
+    "prepare": "husky",
+    "release": "node scripts/release.mjs"
+  },
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11 <12"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "20.5.3",
+    "@commitlint/config-conventional": "20.5.3",
+    "commitizen": "4.3.1",
+    "cz-git": "1.13.0",
+    "husky": "9.1.7",
+    "markdownlint-cli2": "0.22.1",
+    "prettier": "3.8.3",
+    "prettier-plugin-ini": "1.3.0",
+    "prettier-plugin-toml": "2.0.6"
+  }
+}

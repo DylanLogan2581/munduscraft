@@ -1,0 +1,78 @@
+name: Bug or Gameplay Issue
+description: Report broken quests, recipes, worldgen, configs, or gameplay behavior.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for issues inside the modpack once Minecraft reaches the main menu or a world.
+        For launch failures or crashes, use the crash report template instead.
+  - type: input
+    id: pack-version
+    attributes:
+      label: Pack version
+      description: Use the version shown in the launcher or pack metadata.
+      placeholder: "0.0.0"
+    validations:
+      required: true
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft and loader version
+      placeholder: "Minecraft 1.21.1, loader version from pack.toml"
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Singleplayer
+        - Multiplayer client
+        - Dedicated server
+        - LAN world
+    validations:
+      required: true
+  - type: input
+    id: launcher
+    attributes:
+      label: Launcher
+      placeholder: "Prism Launcher, Modrinth App, CurseForge, vanilla launcher, server console"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include world type, dimension, structure, biome, item, block, entity, recipe, or command details when relevant.
+      placeholder: |
+        1. Create or load a world with ...
+        2. Use ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Attach latest.log, relevant server logs, screenshots, or short video clips. Do not paste huge logs directly.
+      placeholder: "Drag files here or link to a paste."
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I reproduced this without adding or removing mods from the pack.
+          required: true
+        - label: I searched existing issues for a duplicate.
+          required: true

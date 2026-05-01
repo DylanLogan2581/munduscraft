@@ -1,0 +1,25 @@
+# Git and local packwiz state
+.git/
+.packwiz/
+
+# Repository-only docs and metadata
+AGENTS.md
+CONTRIBUTING.md
+LICENSE
+README.md
+.gitignore
+.packwizignore
+.github/
+.editorconfig
+.npmrc
+.nvmrc
+CHANGELOG.md
+
+# Node devtools
+node_modules/
+package.json
+package-lock.json
+commitlint.config.cjs
+.markdownlint-cli2.jsonc
+.husky/
+scripts/

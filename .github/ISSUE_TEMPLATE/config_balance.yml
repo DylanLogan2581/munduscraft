@@ -1,0 +1,63 @@
+name: Config, Recipe, or Balance Feedback
+description: Suggest changes to configs, recipes, loot, progression, worldgen, or defaults.
+title: "[Balance]: "
+labels: ["balance"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Config
+        - Recipe
+        - Loot table
+        - Progression
+        - World generation
+        - Mob behavior or spawning
+        - Client defaults
+        - Server defaults
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: pack-version
+    attributes:
+      label: Pack version
+      placeholder: "0.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current behavior
+      description: Describe the config, recipe, loot, progression step, biome, structure, or default setting.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed change
+      description: Include exact values, recipe changes, config keys, or affected files when known.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why?
+      description: Explain the gameplay, server, accessibility, performance, or maintenance reason.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Compatibility and migration impact
+      description: Mention whether this affects existing worlds, servers, player inventories, progression, or client settings.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues for a duplicate.
+          required: true

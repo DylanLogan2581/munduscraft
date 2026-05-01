@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Packwiz documentation
+    url: https://packwiz.infra.link/
+    about: Reference for packwiz pack metadata, exports, and installer behavior.
+  - name: NeoForge documentation
+    url: https://docs.neoforged.net/
+    about: Reference for NeoForge loader behavior and mod compatibility.

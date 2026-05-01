@@ -1,0 +1,78 @@
+name: Mod, Resource Pack, or Shader Request
+description: Suggest adding, removing, replacing, or updating pack content.
+title: "[Content]: "
+labels: ["content"]
+body:
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request type
+      options:
+        - Add a mod
+        - Remove a mod
+        - Replace a mod
+        - Update a mod
+        - Add a resource pack
+        - Add a shader pack
+        - Add a datapack
+        - Other pack content
+    validations:
+      required: true
+  - type: input
+    id: project-name
+    attributes:
+      label: Project name
+      placeholder: "Mod/resource/shader/datapack name"
+    validations:
+      required: true
+  - type: input
+    id: project-url
+    attributes:
+      label: Project URL
+      description: Prefer Modrinth, CurseForge, GitHub releases, or the official project page.
+      placeholder: "https://modrinth.com/mod/example"
+    validations:
+      required: true
+  - type: dropdown
+    id: side
+    attributes:
+      label: Required side
+      options:
+        - Client and server
+        - Client only
+        - Server only
+        - Unsure
+    validations:
+      required: true
+  - type: input
+    id: compatibility
+    attributes:
+      label: Compatibility
+      placeholder: "Minecraft 1.21.1, loader version from pack.toml"
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why should this change be made?
+      description: Explain the gameplay, performance, accessibility, visual, or maintenance benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Known conflicts, dependencies, or licensing notes
+      description: Mention required dependencies, incompatibilities, server restrictions, config needs, or redistribution limitations.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: The project supports Minecraft 1.21.1 or has evidence that it works on this pack version.
+          required: true
+        - label: The project license or distribution terms appear compatible with inclusion in a modpack.
+          required: true
+        - label: I searched existing issues for a duplicate.
+          required: true

@@ -1,0 +1,19 @@
+# packwiz cache
+.packwiz/
+
+# Exported packs
+*.mrpack
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# Node devtools
+node_modules/

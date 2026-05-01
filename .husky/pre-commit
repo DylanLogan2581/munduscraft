@@ -1,0 +1,3 @@
+packwiz refresh
+git add pack.toml index.toml
+npm run lint
