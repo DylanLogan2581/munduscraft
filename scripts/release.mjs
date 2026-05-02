@@ -88,11 +88,13 @@ const bumpVersion = (version, bump) => {
 const releaseLine = (entry) =>
   `- ${entry.type}${entry.scope ? `(${entry.scope})` : ""}: ${entry.subject} (${entry.hash.slice(0, 7)})`;
 
+const changelogTypes = new Set(["feat", "fix", "refactor", "revert"]);
+
 const updateChangelog = ({ version, entries }) => {
   const path = "CHANGELOG.md";
   const date = new Date().toISOString().slice(0, 10);
   const existing = existsSync(path) ? read(path).trimEnd() : "# Changelog\n";
-  const notes = entries.map(releaseLine).join("\n");
+  const notes = entries.filter(({ type }) => changelogTypes.has(type)).map(releaseLine).join("\n");
   const nextEntry = `## ${version} - ${date}\n\n${notes}\n`;
   const body = existing.replace(/^# Changelog\s*/, "# Changelog\n\n");
   write(path, `${body.trimEnd()}\n\n${nextEntry}\n`);
